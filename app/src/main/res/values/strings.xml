@@ -18,7 +18,7 @@
     <string name="_multiply">*</string>
     <string name="_divide">÷</string>
     <string name="_is">=</string>
-    <string name="_back">←</string>
+    <string name="_proc">%</string>
     <string name="_clear">C</string>
     <string name="_root">√</string>
 

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="bottom"
     android:orientation="vertical"
+    android:background="@drawable/grungy"
     tools:ignore="ExtraText">
 
     //history text
@@ -34,6 +35,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,6 +44,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnRoot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -50,14 +53,16 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnProcent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
-            android:text="@string/_back"
+            android:text="@string/_proc"
             android:textSize="@dimen/button_text_size" />
 
         <Button
+            android:id="@+id/btnDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -74,6 +79,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
@@ -83,6 +89,7 @@
             />
 
         <Button
+            android:id="@+id/btnTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
@@ -91,6 +98,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
@@ -99,6 +107,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
@@ -115,6 +124,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -123,6 +133,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -131,6 +142,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnSix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,6 +151,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -155,6 +168,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnSeven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -163,6 +177,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnEight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -171,6 +186,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnNine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -179,6 +195,7 @@
             android:textSize="@dimen/button_text_size" />
 
         <Button
+            android:id="@+id/btnPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -195,6 +212,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnNegative"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -203,6 +221,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnZero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -211,6 +230,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnDot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -219,6 +239,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/btnIs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
