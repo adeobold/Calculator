@@ -7,15 +7,26 @@
     android:orientation="vertical"
     tools:ignore="ExtraText">
 
-    //output text
+    //history text
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/historyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="@dimen/history_text_size" />
+
+    //output text
+    <TextView
+        android:id="@+id/outputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
         android:text="0"
-        android:textSize="@dimen/button_text_size" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="@dimen/output_text_size" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,31 +37,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/_is"
+            android:layout_margin="@dimen/button_margin"
+            android:text="@string/_clear"
             android:textSize="@dimen/button_text_size"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/_is"
+            android:layout_margin="@dimen/button_margin"
+            android:text="@string/_root"
             android:textSize="@dimen/button_text_size"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:text="@string/_is"
-            android:textSize="@dimen/button_text_size"/>
+            android:layout_margin="@dimen/button_margin"
+            android:text="@string/_back"
+            android:textSize="@dimen/button_text_size" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_divide"
             android:textSize="@dimen/button_text_size"/>
 
@@ -65,7 +76,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_1"
             android:textSize="@dimen/button_text_size"
@@ -74,7 +85,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_2"
             android:textSize="@dimen/button_text_size"/>
@@ -82,7 +93,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_3"
             android:textSize="@dimen/button_text_size"/>
@@ -90,7 +101,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_multiply"
             android:textSize="@dimen/button_text_size"/>
@@ -107,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_4"
             android:textSize="@dimen/button_text_size"/>
 
@@ -115,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_5"
             android:textSize="@dimen/button_text_size"/>
 
@@ -123,7 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_6"
             android:textSize="@dimen/button_text_size"/>
 
@@ -131,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_minus"
             android:textSize="@dimen/button_text_size"/>
 
@@ -147,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_7"
             android:textSize="@dimen/button_text_size"/>
 
@@ -155,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_8"
             android:textSize="@dimen/button_text_size"/>
 
@@ -163,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_9"
             android:textSize="@dimen/button_text_size" />
 
@@ -171,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_plus"
             android:textSize="@dimen/button_text_size"/>
 
@@ -187,7 +198,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_negative"
             android:textSize="@dimen/button_text_size"/>
 
@@ -195,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_0"
             android:textSize="@dimen/button_text_size"/>
 
@@ -203,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_dot"
             android:textSize="@dimen/button_text_size"/>
 
@@ -211,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/button_margin"
             android:text="@string/_is"
             android:textSize="@dimen/button_text_size"/>
 
