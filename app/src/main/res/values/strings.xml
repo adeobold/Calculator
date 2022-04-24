@@ -13,5 +13,13 @@
     <string name="_9">9</string>
     <string name="_negative">-/+</string>
     <string name="_dot">.</string>
+    <string name="_plus">+</string>
+    <string name="_minus">-</string>
+    <string name="_multiply">*</string>
+    <string name="_divide">÷</string>
+    <string name="_is">=</string>
+
+    <dimen name="button_text_size">40sp</dimen>
+    <dimen name="output_text_size">30sp</dimen>
 
 </resources>
