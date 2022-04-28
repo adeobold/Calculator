@@ -18,9 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView outputText;
 
-    private Boolean operationInProgress;
-    private Boolean secondArgInput;
-
     private CalcParams calcParams;
 
     char separator;
@@ -45,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTextView();
     }
 
-    private void setTextView(){
+    private void setTextView() {
         outputText.setText(calcParams.getCurrentOutput());
     }
 
@@ -56,8 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         separator = symbols.getDecimalSeparator();
 
         calcParams = new CalcParams();
-        operationInProgress = false;
-        secondArgInput = false;
 
         outputText = findViewById(R.id.outputText);
 
@@ -78,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnMultiply = findViewById(R.id.btnMultiply);
         Button btnDivide = findViewById(R.id.btnDivide);
         Button btnRoot = findViewById(R.id.btnRoot);
-        Button btnProcent = findViewById(R.id.btnProcent);
+        Button btnPercent = findViewById(R.id.btnProcent);
         Button btnIs = findViewById(R.id.btnIs);
         Button btnNegative = findViewById(R.id.btnNegative);
         Button btnDot = findViewById(R.id.btnDot);
@@ -99,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMultiply.setOnClickListener(this);
         btnDivide.setOnClickListener(this);
         btnRoot.setOnClickListener(this);
-        btnProcent.setOnClickListener(this);
+        btnPercent.setOnClickListener(this);
         btnIs.setOnClickListener(this);
         btnNegative.setOnClickListener(this);
         btnDot.setOnClickListener(this);
@@ -115,158 +110,160 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 calcParams.setFirstArg(0.0);
                 calcParams.setSecondArg(0.0);
                 calcParams.setOperation("");
+                calcParams.setOperationInProgress(false);
+                calcParams.setSecondArgInput(false);
                 break;
             case R.id.btnZero:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("0");
                 } else {
                     outputText.setText(outputText.getText() + "0");
                 }
                 break;
             case R.id.btnOne:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("1");
                 } else {
                     outputText.setText(outputText.getText() + "1");
                 }
                 break;
             case R.id.btnTwo:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("2");
                 } else {
                     outputText.setText(outputText.getText() + "2");
                 }
                 break;
             case R.id.btnThree:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("3");
                 } else {
                     outputText.setText(outputText.getText() + "3");
                 }
                 break;
             case R.id.btnFour:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("4");
                 } else {
                     outputText.setText(outputText.getText() + "4");
                 }
                 break;
             case R.id.btnFive:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("5");
                 } else {
                     outputText.setText(outputText.getText() + "5");
                 }
                 break;
             case R.id.btnSix:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("6");
                 } else {
                     outputText.setText(outputText.getText() + "6");
                 }
                 break;
             case R.id.btnSeven:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("7");
                 } else {
                     outputText.setText(outputText.getText() + "7");
                 }
                 break;
             case R.id.btnEight:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("8");
                 } else {
                     outputText.setText(outputText.getText() + "8");
                 }
                 break;
             case R.id.btnNine:
-                if (outputText.getText().toString().equals("0") || secondArgInput) {
+                if (outputText.getText().toString().equals("0") || calcParams.getSecondArgInput()) {
                     outputText.setText("");
-                    secondArgInput = false;
+                    calcParams.setSecondArgInput(false);
                 }
-                if (operationInProgress) {
+                if (calcParams.getOperationInProgress()) {
                     outputText.setText("9");
                 } else {
                     outputText.setText(outputText.getText() + "9");
                 }
                 break;
             case R.id.btnPlus:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("plus");
                 break;
             case R.id.btnMinus:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("minus");
                 break;
             case R.id.btnMultiply:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("multiply");
                 break;
             case R.id.btnDivide:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("divide");
                 break;
             case R.id.btnRoot:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("root");
                 outputText.setText(solve(calcParams.getFirstArg(), calcParams.getSecondArg(), calcParams.getOperation()));
-                operationInProgress = false;
+                calcParams.setOperationInProgress(false);
                 break;
             case R.id.btnProcent:
-                if (!operationInProgress) {
+                if (!calcParams.getOperationInProgress()) {
                     calcParams.setFirstArg(Double.valueOf(outputText.getText().toString()));
-                    secondArgInput = true;
+                    calcParams.setSecondArgInput(true);
                 }
                 calcParams.setOperation("percent");
                 break;
@@ -281,12 +278,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnIs:
                 calcParams.setSecondArg(Double.valueOf(outputText.getText().toString()));
                 outputText.setText(solve(calcParams.getFirstArg(), calcParams.getSecondArg(), calcParams.getOperation()));
-                operationInProgress = false;
+                calcParams.setOperationInProgress(false);
                 break;
             case R.id.btnDot:
                 outputText.setText(outputText.getText().toString() + separator);
         }
 
+        calcParams.setCurrentOutput(outputText.getText().toString());
 
     }
 

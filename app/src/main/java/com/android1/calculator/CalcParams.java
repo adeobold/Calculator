@@ -35,16 +35,6 @@ public class CalcParams implements Parcelable {
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     protected CalcParams(Parcel in) {
-//        if (in.readByte() == 0) {
-//            firstArg = null;
-//        } else {
-//            firstArg = in.readDouble();
-//        }
-//        if (in.readByte() == 0) {
-//            secondArg = null;
-//        } else {
-//            secondArg = in.readDouble();
-//        }
         operationInProgress = in.readBoolean();
         secondArgInput = in.readBoolean();
         firstArg = in.readDouble();
