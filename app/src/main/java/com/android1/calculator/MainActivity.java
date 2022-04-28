@@ -292,12 +292,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String solve(Double firstArg, Double secondArg, String operation) {
 
-        BigDecimal first = new BigDecimal(firstArg.toString());
-        BigDecimal second = new BigDecimal(secondArg.toString());
-
         Double res = 0.0;
 
         try {
+
+            BigDecimal first = new BigDecimal(firstArg.toString());
+            BigDecimal second = new BigDecimal(secondArg.toString());
+
             switch (operation) {
                 case "plus":
                     res = first.add(second).doubleValue();
@@ -312,14 +313,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     res =  first.divide(second,13, RoundingMode.HALF_UP).doubleValue();
                     break;
                 case "root":
-                    res = Math.sqrt(second.doubleValue());
+                    res = Math.sqrt(first.doubleValue());
                     break;
                 case "percent":
-                    res = first.divide(new BigDecimal("100")).multiply(second).doubleValue();
+                    res = first.divide(new BigDecimal("100"),13, RoundingMode.HALF_UP).multiply(second).doubleValue();
                     break;
             }
         } catch (ArithmeticException e) {
             return "Ошибка";
+        }
+
+        if (res.toString().length() > 15) {
+            return "Ошибка";
+        } else if (res.toString().contains("E")){
+            return res.toString();
         }
 
         return new DecimalFormat("0.#############").format(res);
