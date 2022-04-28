@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
@@ -290,38 +292,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String solve(Double firstArg, Double secondArg, String operation) {
 
-        double result = 0.0;
+        BigDecimal first = new BigDecimal(firstArg.toString());
+        BigDecimal second = new BigDecimal(secondArg.toString());
+
+        Double res = 0.0;
 
         try {
             switch (operation) {
                 case "plus":
-                    result = firstArg + secondArg;
+                    res = first.add(second).doubleValue();
                     break;
                 case "minus":
-                    result = firstArg - secondArg;
+                    res = first.subtract(second).doubleValue();
                     break;
                 case "multiply":
-                    result = firstArg * secondArg;
+                    res =  first.multiply(second).doubleValue();
                     break;
                 case "divide":
-                    result = firstArg / secondArg;
+                    res =  first.divide(second,13, RoundingMode.HALF_UP).doubleValue();
                     break;
                 case "root":
-                    result = Math.sqrt(firstArg);
+                    res = Math.sqrt(second.doubleValue());
                     break;
                 case "percent":
-                    result = firstArg / 100 * secondArg;
+                    res = first.divide(new BigDecimal("100")).multiply(second).doubleValue();
                     break;
             }
         } catch (ArithmeticException e) {
             return "Ошибка";
         }
 
-        if ((result - (int) result) == 0) {
-            return String.valueOf((int) result);
-        }
-
-        return new DecimalFormat("0.#############").format(result);
+        return new DecimalFormat("0.#############").format(res);
 
     }
 
