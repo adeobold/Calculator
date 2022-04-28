@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_clear"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnRoot"
@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_root"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnProcent"
@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_proc"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size_landscape" />
 
         <Button
             android:id="@+id/btnDivide"
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_divide"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
     </LinearLayout>
 
@@ -87,7 +87,7 @@
             android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_1"
-            android:textSize="@dimen/button_text_size"
+            android:textSize="@dimen/button_text_size_landscape"
             />
 
         <Button
@@ -97,7 +97,7 @@
             android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_2"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnThree"
@@ -106,7 +106,7 @@
             android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_3"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnMultiply"
@@ -115,7 +115,7 @@
             android:layout_margin="@dimen/button_margin"
             android:layout_weight="1"
             android:text="@string/_multiply"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
     </LinearLayout>
 
@@ -132,7 +132,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_4"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnFive"
@@ -141,7 +141,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_5"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnSix"
@@ -150,7 +150,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_6"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnMinus"
@@ -159,7 +159,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_minus"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
     </LinearLayout>
 
@@ -176,7 +176,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_7"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnEight"
@@ -185,7 +185,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_8"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnNine"
@@ -194,7 +194,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_9"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size_landscape" />
 
         <Button
             android:id="@+id/btnPlus"
@@ -203,7 +203,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_plus"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
     </LinearLayout>
 
@@ -220,7 +220,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_negative"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnZero"
@@ -229,7 +229,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_0"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnDot"
@@ -238,7 +238,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_dot"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
         <Button
             android:id="@+id/btnIs"
@@ -247,7 +247,7 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/button_margin"
             android:text="@string/_is"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size_landscape"/>
 
     </LinearLayout>
 
