@@ -3,11 +3,10 @@ package com.android1.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 
 public class SettingsActivity extends AppCompatActivity implements Constants {
@@ -18,16 +17,13 @@ public class SettingsActivity extends AppCompatActivity implements Constants {
         setContentView(R.layout.activity_settings);
 
         Button btnBack = findViewById(R.id.btnBack);
-        Switch swDarkTheme = findViewById(R.id.swDarkTheme);
+        @SuppressLint("UseSwitchCompatOrMaterialCode") Switch swDarkTheme = findViewById(R.id.swDarkTheme);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentResult = new Intent();
-                intentResult.putExtra(SETTINGS_RESULT, swDarkTheme.isChecked());
-                setResult(RESULT_OK, intentResult);
-                finish();
-            }
+        btnBack.setOnClickListener(view -> {
+            Intent intentResult = new Intent();
+            intentResult.putExtra(SETTINGS_RESULT, swDarkTheme.isChecked());
+            setResult(RESULT_OK, intentResult);
+            finish();
         });
 
         int themeName = getIntent().getExtras().getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_NO);
@@ -35,7 +31,6 @@ public class SettingsActivity extends AppCompatActivity implements Constants {
         if (themeName == AppCompatDelegate.MODE_NIGHT_YES) {
             swDarkTheme.setChecked(true);
         }
-        ;
 
         swDarkTheme.setOnCheckedChangeListener((compoundButton, b) -> {
 

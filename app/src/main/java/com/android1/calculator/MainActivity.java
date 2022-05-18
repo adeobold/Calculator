@@ -114,18 +114,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
 
                 intent.putExtra(THEME_KEY, AppCompatDelegate.getDefaultNightMode());
-                startActivityForResult(intent,REQUEST_CODE_SETTING_ACTIVITY);
+                startActivityForResult(intent, REQUEST_CODE_SETTING_ACTIVITY);
             }
         });
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode != REQUEST_CODE_SETTING_ACTIVITY) {
             super.onActivityResult(requestCode, resultCode, data);
             return;
         }
-        if (resultCode == RESULT_OK){
+        if (resultCode == RESULT_OK) {
             if (data.getExtras().getBoolean(SETTINGS_RESULT)) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             } else {
@@ -317,7 +317,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 calcParams.setOperationInProgress(false);
                 break;
             case R.id.btnDot:
-                outputText.setText(outputText.getText().toString() + separator);
+                if (!outputText.getText().toString().contains(String.valueOf(separator))) {
+                    outputText.setText(outputText.getText().toString() + separator);
+                }
         }
 
         calcParams.setCurrentOutput(outputText.getText().toString());
@@ -341,16 +343,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     res = first.subtract(second).doubleValue();
                     break;
                 case "multiply":
-                    res =  first.multiply(second).doubleValue();
+                    res = first.multiply(second).doubleValue();
                     break;
                 case "divide":
-                    res =  first.divide(second,13, RoundingMode.HALF_UP).doubleValue();
+                    res = first.divide(second, 13, RoundingMode.HALF_UP).doubleValue();
                     break;
                 case "root":
                     res = Math.sqrt(first.doubleValue());
                     break;
                 case "percent":
-                    res = first.divide(new BigDecimal("100"),13, RoundingMode.HALF_UP).multiply(second).doubleValue();
+                    res = first.divide(new BigDecimal("100"), 13, RoundingMode.HALF_UP).multiply(second).doubleValue();
                     break;
             }
         } catch (ArithmeticException e) {
@@ -359,7 +361,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (res.toString().length() > 15) {
             return "Ошибка";
-        } else if (res.toString().contains("E")){
+        } else if (res.toString().contains("E")) {
             return res.toString();
         }
 
