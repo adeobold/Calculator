@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnBackName">Назад</string>
+    <string name="SettingsThemeName">Темная тема</string>
+    <string name="btnSettingsName">Настройки</string>
+</resources>

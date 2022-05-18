@@ -21,11 +21,15 @@
     <string name="_proc">%</string>
     <string name="_clear">C</string>
     <string name="_root">√</string>
+    <string name="btnBackName">Назад</string>
+    <string name="SettingsThemeName">Темная тема</string>
+    <string name="btnSettingsName">Настройки</string>
 
 
     <dimen name="button_text_size">40sp</dimen>
     <dimen name="button_text_size_landscape">30sp</dimen>
     <dimen name="output_text_size">50sp</dimen>
+    <dimen name="output_text_size_land">40sp</dimen>
     <dimen name="history_text_size">20sp</dimen>
     <dimen name="button_margin">1dp</dimen>
 
