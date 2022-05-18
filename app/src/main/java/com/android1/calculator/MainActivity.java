@@ -2,19 +2,23 @@ package com.android1.calculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Constants {
 
     private final static String CalcParams = "CalcParams";
 
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private CalcParams calcParams;
 
     char separator;
+
+    private static final int REQUEST_CODE_SETTING_ACTIVITY = 99;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +106,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnIs.setOnClickListener(this);
         btnNegative.setOnClickListener(this);
         btnDot.setOnClickListener(this);
+
+        Button btnSettings = findViewById(R.id.btnSettings);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+
+                intent.putExtra(THEME_KEY, AppCompatDelegate.getDefaultNightMode());
+                startActivityForResult(intent,REQUEST_CODE_SETTING_ACTIVITY);
+            }
+        });
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode != REQUEST_CODE_SETTING_ACTIVITY) {
+            super.onActivityResult(requestCode, resultCode, data);
+            return;
+        }
+        if (resultCode == RESULT_OK){
+            if (data.getExtras().getBoolean(SETTINGS_RESULT)) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            }
+            setContentView(R.layout.portrait_layout);
+            initElements();
+        }
     }
 
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
